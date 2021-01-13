@@ -1,0 +1,2 @@
+class Webtype < ApplicationRecord
+end
