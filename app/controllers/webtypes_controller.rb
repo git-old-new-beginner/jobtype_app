@@ -1,5 +1,6 @@
 class WebtypesController < ApplicationController
   def index
+    @webtype = Webtype.includes(:user)
   end
 
   def new
