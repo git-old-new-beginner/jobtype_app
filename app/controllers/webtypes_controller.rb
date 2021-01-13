@@ -15,6 +15,10 @@ class WebtypesController < ApplicationController
       render :new
     end
   end
+
+  def show
+    @webtype = Webtype.find(params[:id])
+  end
   
   private
 
