@@ -7,6 +7,8 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :name_reading, presence: true
   validates :nickname, presence: true
-  validates :profile, presence: true     
+  validates :profile, presence: true
+
+  has_many :webtypes
         
 end
