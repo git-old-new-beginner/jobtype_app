@@ -10,5 +10,6 @@ class User < ApplicationRecord
   validates :profile, presence: true
 
   has_many :webtypes
+  has_many :comments
         
 end
