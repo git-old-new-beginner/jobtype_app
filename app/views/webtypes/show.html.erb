@@ -8,7 +8,7 @@
       <% if current_user == @webtype.user%>
         <div class="prototype__manage">
           <%= link_to "編集する", edit_webtype_path(@webtype), class: :prototype__btn %>
-          <%= link_to "削除する", webtype_path(@webtype), method: :delete, class: :prototype__btn %>
+          <%= link_to "削除する", webtype_path(@webtype.id), method: :delete, class: :prototype__btn %>
         </div>
       <% end %>
       <div class="prototype__image">
