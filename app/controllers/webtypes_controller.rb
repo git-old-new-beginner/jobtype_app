@@ -19,7 +19,20 @@ class WebtypesController < ApplicationController
   def show
     @webtype = Webtype.find(params[:id])
   end
-  
+
+  def edit
+    @webtype = Webtype.find(params[:id])
+  end
+
+  def update
+    if @webtype = Webtype.update(webtype_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
+
   private
 
   def webtype_params
