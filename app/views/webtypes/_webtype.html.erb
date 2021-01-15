@@ -5,6 +5,6 @@
     <p class="card__summary">
       <%= webtype.catch_copy %>
     </p>
-    <%= link_to "by #{webtype.user.name}", root_path, class: :card__user %>
+    <%= link_to "by #{webtype.user.name}", user_path(webtype.user), class: :card__user %>
   </div>
 </div>

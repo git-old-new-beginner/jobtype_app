@@ -4,7 +4,7 @@
       <p class="prototype__hedding">
         <%= @webtype.title %>
       </p>
-      <%= link_to "by #{@webtype.user.name}", root_path, class: :prototype__user %>
+      <%= link_to "by #{@webtype.user.name}", user_path(@webtype.user), class: :prototype__user %>
       <% if current_user == @webtype.user%>
         <div class="prototype__manage">
           <%= link_to "編集する", edit_webtype_path(@webtype), class: :prototype__btn %>
@@ -44,7 +44,7 @@
           <% @comments.each do |comment| %>
             <li class="comments_list">
               <%= comment.text%>
-              <%= link_to "（#{comment.user.name}) ", root_path, class: :comment_user %>
+              <%= link_to "（#{comment.user.name}) ", user_path(comment.user), class: :comment_user %>
             </li>
           <% end %>
         </ul>

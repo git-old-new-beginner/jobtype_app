@@ -28,7 +28,7 @@
         <%= "#{@user.name}さんの仕事内容"%>
       </h2>
       <div class="user__card">
-        <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
+        <%= render partial: 'webtypes/webtype', collection: @user.webtypes %>
       </div>
     </div>
   </div>
