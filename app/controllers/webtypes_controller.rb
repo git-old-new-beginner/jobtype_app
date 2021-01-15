@@ -18,6 +18,8 @@ class WebtypesController < ApplicationController
 
   def show
     @webtype = Webtype.find(params[:id])
+    @comment = Comment.new
+    @comments = @webtype.comments.includes(:user)
   end
 
   def edit
